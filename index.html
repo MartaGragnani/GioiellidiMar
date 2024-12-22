@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gioielli di Mar</title>
+    <style>
+        ::-webkit-scrollbar {
+      display: none;
+    }
+    body {
+         
+            background: cornflowerblue;
+            margin: 0;
+            overflow-x: hidden;
+            flex-direction: column;        
+        }
+
+        .layout{
+        flex-shrink: 0; 
+        position: relative; 
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        margin: 0;       
+    }
+    .title{
+        font-size: 100px;
+        color: #000000;
+        text-align: center;
+    }
+    .buttons{
+        height: 5vh;
+        width: 100vw;
+        display: flex;
+        margin-top: 110px;
+        flex-direction: row;
+        background-color: rgba(255, 0, 0, 0);
+        justify-content: center; 
+
+    }
+    .pad{
+        padding: 30px;
+    }
+    .tabButton{
+        color: #000;
+        
+        font-size: 19px;
+        width: 250px;
+        position: relative;
+        background-color: #95959500;
+        border-color: #00000000;
+        
+
+    }
+    .tabButton.active{
+        color: #00000049;
+        background-color: #00000000;
+    }
+    .tab-content{
+        display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-top: none;
+
+    }
+    .tab-content.active{
+        display: block;
+        width: 100vw;
+        height: 500vh;
+      
+        font-size: 100px;
+        background-color: rgba(0, 136, 255, 0);
+    }
+    .mainSlideShow{
+       
+        position:relative;
+        
+        background-color: rgba(255, 0, 0, 0);
+        overflow-x: scroll;
+        display: flex;
+        overflow-y: scroll;
+
+    }
+    .aboutMe{
+        position:relative;
+        height: 60vh;
+        width: 90vw;
+        background-color: rgba(109, 160, 143, 0);
+
+    }
+    .bottomPage{
+        position:relative;
+            height: 15vh;
+            width: 100vw;
+            background-color: rgba(0, 151, 101, 0);
+
+    }
+    .line-background  {
+            width: 95%;
+            margin:  auto;
+            border-top: 2px solid rgba(255, 255, 255, 0.482);
+
+        }
+    .space{
+        padding: 10px;
+    }
+        </style>
+</head>
+<body>
+    <div class="layout">
+
+        <div class="title">
+            <p>Gioielli di Mar</p>
+
+        </div>
+
+        <div class="buttons">
+            <button id="homeBt" class="tabButton active" data-tab="tabHome">Home</button>
+            <div class="pad"></div>
+            <button id="EvtBt" class="tabButton" data-tab="tabEv">My work</button>
+            <div class="pad"></div>
+            <button id="tabtBt"  class="tabButton" data-tab="tabAbt">About me</button>
+        </div>
+
+        <div class="line-background"></div>
+
+        <div id="tabHome" class="tab-content active">
+            <div id = "sliderProd" class="mainSlideShow"></div>
+            <div class="space"></div>
+            <div class="line-background"></div>
+            <div id="aboutMeSpace" class="aboutMe"></div>
+            <div class="line-background"></div>
+            <div id="bottomContacts" class="bottomPage"></div>
+        </div>
+
+        <div id="tabEv" class="tab-content">
+            <div id="prodList" class="productList"></div>
+        </div>
+
+        <div id="tabAbt" class="tab-content">
+
+
+            
+        </div>
+
+        </div>
+
+    </div>
+    <script src="index.js"></script>
+
+    
+</body>
+</html>
